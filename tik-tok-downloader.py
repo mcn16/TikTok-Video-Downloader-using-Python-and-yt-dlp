@@ -90,7 +90,7 @@ class TikTokDownloader:
             'noplaylist': True,
             'quiet': False,
             'progress_hooks': [self.progress_hook],
-            'cookiesfrombrowser': ('chrome',),  # Use Chrome cookies for authentication
+            # Use Chrome cookies for authentication
             'extractor_args': {'tiktok': {'webpage_download': True}},
             'http_headers': {
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
@@ -110,13 +110,15 @@ class TikTokDownloader:
         
         return None
 
-# Example usage
+# usage
 if __name__ == "__main__":
-    downloader = TikTokDownloader(save_path='downloaded_tiktoks')
-    video_url = "https://www.tiktok.com/@zachking/video/6768504823336815877"
+    downloader = TikTokDownloader(save_path='MiranTok')
+urls = [
+        "https://www.tiktok.com/@user1/video/1234567890",
+        "https://www.tiktok.com/@user2/video/0987654321"
+    ]
+                                                    
+                                                    
     
-    # Basic usage
-    downloader.download_video(video_url)
-    
-    # With custom filename
-    downloader.download_video(video_url, custom_name="zach_king_magic")
+for url in urls:
+    downloader.download_video(url)
