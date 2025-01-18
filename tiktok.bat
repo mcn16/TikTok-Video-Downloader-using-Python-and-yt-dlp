@@ -1,16 +1,5 @@
 @echo off
 color 0A
-
-:banner
-echo.
-echo          _____ ___ _    __________________  __ __
-echo         / ___//   | |  / / ____/_  __/ __ \/ //_/
-echo         \__ \/ /| | | / / __/   / / / / / / ,<   
-echo         __/ / ___ | |/ / /___  / / / /_/ / /| |  
-echo        /____/_/  |_|___/_____/ /_/  \____/_/ |_|  
-echo.
-echo.
-
 cd "C:\Users\miran\TikTok-Video-Downloader-using-Python-and-yt-dlp"
 if %ERRORLEVEL% NEQ 0 (
     echo Failed to change directory to TikTok-Video-Downloader-using-Python-and-yt-dlp
