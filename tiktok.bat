@@ -1,7 +1,21 @@
 @echo off
 color 0A
+echo Starting batch file...
 cd TikTok-Video-Downloader-using-Python-and-yt-dlp
-venv\Scripts\activate
+if %ERRORLEVEL% NEQ 0 (
+    echo Failed to change directory to TikTok-Video-Downloader-using-Python-and-yt-dlp
+    pause
+    goto end
+)
+echo Changed directory to TikTok-Video-Downloader-using-Python-and-yt-dlp
+
+call venv\Scripts\activate
+if %ERRORLEVEL% NEQ 0 (
+    echo Failed to activate virtual environment
+    pause
+    goto end
+)
+echo Virtual environment activated
 
 :menu
 echo Please choose an option:
@@ -17,14 +31,22 @@ if "%choice%"=="3" goto end
 goto menu
 
 :run_script
+echo Running Python script with URLs: %URLS%
 python tik-tok-downloader.py %URLS%
+if %ERRORLEVEL% NEQ 0 (
+    echo Failed to run the Python script
+    pause
+    goto end
+)
 pause
 goto end
 
 :add_url
 set /p URL=Enter the URL: 
 set URLS=%URLS% %URL%
+echo URLs: %URLS%
 goto menu
 
 :end
 echo Exiting...
+pause
