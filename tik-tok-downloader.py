@@ -113,7 +113,13 @@ class TikTokDownloader:
 
 # usage
 if __name__ == "__main__":
-    downloader = TikTokDownloader(save_path='MiranTok')
-    urls = sys.argv[1:]
+    if len(sys.argv) > 1:
+        save_path = sys.argv[-1]
+        urls = sys.argv[1:-1]
+    else:
+        save_path = 'unfiled'
+        urls = []
+
+    downloader = TikTokDownloader(save_path=save_path)
     for url in urls:
         downloader.download_video(url)
