@@ -11,7 +11,7 @@ echo Changed directory to TikTok-Video-Downloader-using-Python-and-yt-dlp
 
 call venv\Scripts\activate
 if %ERRORLEVEL% NEQ 0 (
-    echo Failed to activate virtual environment
+    echo Failed to activate virtual environment, go to command prompt and type python -m venv venv
     pause
     goto end
 )
