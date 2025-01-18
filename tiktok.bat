@@ -1,21 +1,23 @@
 @echo off
 color 0A
+
 :banner
- echo
- echo  _____ ___ _    __________________  __ __
- echo / ___//   | |  / / ____/_  __/ __ \/ //_/
- echo \__ \/ /| | | / / __/   / / / / / / ,<   
- echo___/ / ___ | |/ / /___  / / / /_/ / /| |  
-echo/____/_/  |_|___/_____/ /_/  \____/_/ |_|  
-echo                                           
-echo                                                                                   
+echo.
+echo          _____ ___ _    __________________  __ __
+echo         / ___//   | |  / / ____/_  __/ __ \/ //_/
+echo         \__ \/ /| | | / / __/   / / / / / / ,<   
+echo         __/ / ___ | |/ / /___  / / / /_/ / /| |  
+echo        /____/_/  |_|___/_____/ /_/  \____/_/ |_|  
+echo.
+echo.
+
 cd "C:\Users\miran\TikTok-Video-Downloader-using-Python-and-yt-dlp"
 if %ERRORLEVEL% NEQ 0 (
     echo Failed to change directory to TikTok-Video-Downloader-using-Python-and-yt-dlp
     pause
     goto end
 )
-
+echo Changed directory to TikTok-Video-Downloader-using-Python-and-yt-dlp
 
 call venv\Scripts\activate
 if %ERRORLEVEL% NEQ 0 (
@@ -23,7 +25,9 @@ if %ERRORLEVEL% NEQ 0 (
     pause
     goto end
 )
+echo Virtual environment activated
 
+set URLS=
 
 :menu
 echo Please choose an option:
@@ -36,7 +40,6 @@ if "%choice%"=="1" goto run_script
 if "%choice%"=="2" goto add_urls
 if "%choice%"=="3" goto end
 
-
 goto menu
 
 :run_script
@@ -45,20 +48,19 @@ python tik-tok-downloader.py %URLS%
 if %ERRORLEVEL% NEQ 0 (
     echo Failed to run the Python script
     pause
-    goto end
+    goto menu
 )
+echo Python script executed successfully
 pause
-goto end
+goto menu
 
 :add_urls
 :input_url
 set /p URL=Enter the URL (type 'menu' to return to the main menu): 
 if "%URL%"=="menu" goto menu
-set URLS=%URLS% %URL%
+set URLS=%URLS% "%URL%"
 echo URLs added so far: %URLS%
 goto input_url
-
-
 
 :end
 echo Exiting...
