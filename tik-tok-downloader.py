@@ -1,6 +1,7 @@
 import yt_dlp
 import os
 import re
+import sys
 from typing import Optional, Dict, Any
 from datetime import datetime
 
@@ -113,12 +114,6 @@ class TikTokDownloader:
 # usage
 if __name__ == "__main__":
     downloader = TikTokDownloader(save_path='MiranTok')
-urls = [
-        "https://www.tiktok.com/@user1/video/1234567890",
-        "https://www.tiktok.com/@user2/video/0987654321"
-    ]
-                                                    
-                                                    
-    
-for url in urls:
-    downloader.download_video(url)
+    urls = sys.argv[1:]
+    for url in urls:
+        downloader.download_video(url)
