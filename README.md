@@ -1,7 +1,7 @@
 ## Installation 
 1. Go into your command prompt and type
   ```bash
-git clone https://github.com/vgvr0/TikTok-Video-Downloader-using-Python-and-yt-dlp
+git clone https://github.com/mcn16/TikTok-Video-Downloader-using-Python-and-yt-dlp
 ```
 2. CD to the repository by typing
 ```bash
