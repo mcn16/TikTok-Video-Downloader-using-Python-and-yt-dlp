@@ -15,7 +15,7 @@ pip install -r requirements.txt
 6. Double-click on the first result
 7. Run tiktok.bat by double-clicking on it
 ## Usage 
- Follow instructions when openedtiktok.bat
+ Follow instructions when opened tiktok.bat
 
 
  ## Debugging:
