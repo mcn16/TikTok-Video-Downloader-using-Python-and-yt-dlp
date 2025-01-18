@@ -24,14 +24,16 @@ set SAVEPATH=
 echo Please choose an option:
 echo 1. Run Script
 echo 2. Add a URL
-echo 3. Change Save Path(default is unfiled)
-echo 4. Exit
-set /p choice=Enter your choice (1, 2, 3, or 4):
+echo 3. Change Save Path (default is unfiled)
+echo 4. Clear URLs
+echo 5. Exit
+set /p choice=Enter your choice (1, 2, 3, 4, or 5):
 
 if "%choice%"=="1" goto run_script
 if "%choice%"=="2" goto add_urls
 if "%choice%"=="3" goto change_save_folder
-if "%choice%"=="4" goto end
+if "%choice%"=="4" goto clear_urls
+if "%choice%"=="5" goto end
 
 goto menu
 
@@ -60,6 +62,12 @@ goto input_url
 :change_save_folder
 set /p SAVEPATH=Enter the folder name where videos will be saved:
 echo Save folder changed to: %SAVEPATH%
+goto menu
+
+:clear_urls
+set URLS=
+echo URLs have been cleared
+pause
 goto menu
 
 :end
