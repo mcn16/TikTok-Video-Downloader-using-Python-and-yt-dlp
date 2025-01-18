@@ -1,7 +1,7 @@
 @echo off
 color 0A
 echo Starting batch file...
-cd TikTok-Video-Downloader-using-Python-and-yt-dlp
+cd "C:\Users\miran\TikTok-Video-Downloader-using-Python-and-yt-dlp"
 if %ERRORLEVEL% NEQ 0 (
     echo Failed to change directory to TikTok-Video-Downloader-using-Python-and-yt-dlp
     pause
