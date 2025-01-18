@@ -1,7 +1,7 @@
 ## Installation 
 1. Go into your command prompt and type
   ```bash
-git clone https://github.com/vgvr0/TikTok-Video-Downloader-using-Python-and-yt-dlp
+git clone https://github.com/mcn16/TikTok-Video-Downloader-using-Python-and-yt-dlp
 ```
 2. CD to the repository by typing
 ```bash
@@ -15,7 +15,7 @@ pip install -r requirements.txt
 6. Double-click on the first result
 7. Run tiktok.bat by double-clicking on it
 ## Usage 
- Follow instructions when openedtiktok.bat
+ Follow instructions when opened tiktok.bat
 
 
  ## Debugging:
