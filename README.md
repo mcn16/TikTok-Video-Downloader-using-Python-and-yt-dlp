@@ -19,10 +19,15 @@ pip install -r requirements.txt
 
 
  ## Debugging:
- If you get an error stating "Failed to activate virtual environment", go to your command prompt, repeat step 2 and then type 
+ If you get an error stating "Failed to activate virtual environment", go to your command prompt, repeat step 2(cd to the repository) and then type 
  ```bash
  python -m venv venv
 ```
+after that type
+```bash
+ tiktok.bat
+```
+to run the script
 ## Acknowledgments
 Thank you so much to the original (https://github.com/vgvr0/TikTok-Video-Downloader-using-Python-and-yt-dlp)
 ##  Support
